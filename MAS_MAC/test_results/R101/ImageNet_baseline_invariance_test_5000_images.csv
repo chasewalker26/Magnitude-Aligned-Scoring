@@ -1,0 +1,16 @@
+RISE ins rand ICR,0.49509979
+RISE del rand ICR,0.36928549
+RISE ins - del rand ICR,0.60056269
+
+RISE ins mean ICR,0.50495851
+RISE del mean ICR,0.367687
+RISE ins - del mean ICR,0.60992533
+
+MAS ins rand ICR,0.55395853
+MAS del rand ICR,0.67982272
+MAS ins - del rand IRR,0.66045679
+
+MAS ins mean ICR,0.57904741
+MAS del mean ICR,0.67940479
+MAS ins - del mean IRR,0.67425321
+
