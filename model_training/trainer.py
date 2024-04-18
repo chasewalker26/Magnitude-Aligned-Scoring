@@ -23,16 +23,13 @@ from torchvision import datasets
 
 os.sys.path.append(os.path.dirname(os.path.abspath('.')))
 
-from util.attribution_methods.VIT_LRP.interpret_methods import InterpretTransformer
 from util.attribution_methods.VIT_LRP.ViT_new import vit_base_patch16_224
 
 # adapted from https://github.com/pytorch/examples/blob/main/imagenet/main.py
 
 
 #### EXAMPLE USAGE ####
-# cd Desktop/XAIcode/code/train_on_a_dataset
 # python3 trainer.py --path-to-data ../../resisc45 --num-classes 45 --save_name resisc_45_resnet101.pth.tar --batch-size 100
-
 
 model_names = sorted(name for name in models.__dict__
     if name.islower() and not name.startswith("__")

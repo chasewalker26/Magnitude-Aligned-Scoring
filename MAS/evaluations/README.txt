@@ -23,9 +23,9 @@ TRAINING RESIC45 MODELS
 
 EVALUATION ON ALL MODELS
 
-    cd MAS_MAC/evaluations
+    cd MAS/evaluations
 
-    All results save to a sub folder of MAS_MAC called "test_results". 
+    All results save to a sub folder of MAS called "test_results". 
     Results for different models have their own folder: "R101" or "VIT16".
 
     Testing sensitivity (table 1)
@@ -40,7 +40,7 @@ EVALUATION ON ALL MODELS
         python3 resisc45SensitivityTest.py --model R101 --image_count 1000 --noise_type noised --dataset_path ../../../resisc45 --dataset_name resisc45
         python3 resisc45SensitivityTest.py --model VIT16 --image_count 1000 --noise_type noised --dataset_path ../../../resisc45 --dataset_name resisc45
 
-        Use notebooks/sensitivity_test_grapher.ipynb to visualize the curves and measure the sensitivity, two examples are provided.
+        Use MAS/sensitivity_test_grapher.ipynb to visualize the curves and measure the sensitivity, two examples are provided.
 
 
     Testing consistency (table 2)
