@@ -7,9 +7,15 @@ Place the ImageNet and RESISC45 datasets in the project root folder.
 RESISC45 download: `https://1drv.ms/u/s!AmgKYzARBl5ca3HNaHIlzp_IXjs`
 
 ## How to Use the Magnitude Aligned Scoring (MAS) Metric on Attributions
-See example.ipynb for a full example of the application of the MAS source code for multiple attributions.
+See `example.ipynb` for a full example of the application of the MAS source code for multiple attributions.
 
-Also included in the notebook are the PIC and RISE metrics.
+It shows:
+<ul>
+  <li>Importing and setting up models and images for prediction.</li>
+  <li>Generating attributions using integrated gradients, left integrated gradients, gradcam, guided gradcam, guided backpropagation, guided integrated gradients, and adversarial gradient integration.</li>
+  <li>The class initialization and wrapper functions needed to use MAS and how to run MAS on any of the above attributions.</li>
+  <li>PIC and RISE are included for comparison.</li>
+</ul>
 
 ## Replicating the Paper Experiments
 To replicate the paper experiments, please see the README inside of the `MAS/experiments` folder.
