@@ -1,3 +1,5 @@
+# https://github.com/chasewalker26/Magnitude-Aligned-Scoring
+
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
 

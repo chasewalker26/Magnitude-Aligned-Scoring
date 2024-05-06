@@ -1,3 +1,5 @@
+# https://github.com/chasewalker26/Magnitude-Aligned-Scoring
+
 import torch
 import numpy as np
 from scipy.ndimage import gaussian_filter
@@ -29,20 +31,20 @@ def auc(arr):
     return (arr.sum() - arr[0] / 2 - arr[-1] / 2) / (arr.shape[0] - 1)
 
 class MASMetric():
-    def __init__(self, model, HW, mode, step, substrate_fn):
+    def __init__(self, model, HW, mode, step_size, substrate_fn):
         r"""Create deletion/insertion metric instance.
         Args:
             model (nn.Module): Black-box model being explained.
-            HW: image size in pixels given as h*w e.g. 224*224.
+            HW (int): image size in pixels given as h*w e.g. 224*224.
             mode (str): 'del' or 'ins'.
-            step (int): number of pixels modified per one iteration.
+            step_size (int): number of pixels modified per one iteration e.g. 224.
             substrate_fn (func): a mapping from old pixels to new pixels.
         """
         assert mode in ['del', 'ins']
         self.model = model
         self.HW = HW
         self.mode = mode
-        self.step = step
+        self.step_size = step_size
         self.substrate_fn = substrate_fn
 
     def single_run(self, img_tensor, saliency_map, device, max_batch_size = 50):
@@ -50,17 +52,17 @@ class MASMetric():
         Args:
             img_tensor (Tensor): normalized image tensor.
             saliency_map (np.ndarray): saliency map.
-            device: gpu or cpu.
-            max_batch_size (int): controls the parallelization of the testing.
+            device (str): 'cpu' or gpu id e.g. 'cuda:0'.
+            max_batch_size (int): controls the parallelization of the test.
         Return:
             n_steps (int): the number of steps used over the test.
             corrected_scores (nd.array): Array containing MAS scores at every step.
-            alignment_penalty (nd.array): Array containing alignment penalty at every step
-            density_response (nd.array): Array containing density response at every step
-            model_response (nd.array): Array containing RISE uncorrected scores at every step
+            alignment_penalty (nd.array): Array containing alignment penalty at every step.
+            density_response (nd.array): Array containing the density response at every step.
+            normalized_model_response (nd.array): Array containing the model response at every step.
         """
 
-        n_steps = (self.HW + self.step - 1) // self.step
+        n_steps = (self.HW + self.step_size - 1) // self.step_size
 
         batch_size = n_steps if n_steps < max_batch_size else max_batch_size
 
@@ -125,7 +127,7 @@ class MASMetric():
 
             # collect images at all batch steps before mass prediction 
             for i in range(batch):
-                coords = salient_order[:, self.step * (total_steps - 1) : self.step * (total_steps)]
+                coords = salient_order[:, self.step_size * (total_steps - 1) : self.step_size * (total_steps)]
 
                 start.cpu().numpy().reshape(1, 3, self.HW)[0, :, coords] = finish.cpu().numpy().reshape(1, 3, self.HW)[0, :, coords]
 

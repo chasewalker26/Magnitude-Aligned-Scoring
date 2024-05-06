@@ -1,3 +1,4 @@
+# https://github.com/chasewalker26/Magnitude-Aligned-Scoring
 import torch
 import torch.nn as nn
 from torchvision import models

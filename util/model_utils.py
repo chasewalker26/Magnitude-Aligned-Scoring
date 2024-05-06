@@ -1,3 +1,5 @@
+# https://github.com/chasewalker26/Magnitude-Aligned-Scoring
+
 import torch
 
 # returns the softmax classification value of an image for the highest predicted class or a target class

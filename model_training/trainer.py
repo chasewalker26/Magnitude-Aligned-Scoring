@@ -1,3 +1,5 @@
+# https://github.com/chasewalker26/Magnitude-Aligned-Scoring
+
 import argparse
 import os
 import random

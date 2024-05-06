@@ -1,7 +1,7 @@
+# https://github.com/chasewalker26/Magnitude-Aligned-Scoring
+
 import numpy as np
 import torch
-from torchvision import models
-from torchvision import transforms
 from PIL import Image
 import matplotlib.pyplot as plt
 
@@ -9,7 +9,7 @@ import io
 import os
 
 from scipy import interpolate
-from typing import Callable, List, NamedTuple, Optional, Sequence, Tuple
+from typing import List, NamedTuple, Sequence
 
 # Copyright 2021 Google Inc. All Rights Reserved.
 #
@@ -29,7 +29,7 @@ from typing import Callable, List, NamedTuple, Optional, Sequence, Tuple
 # PIC attrbution testing method 
 # code adapted from https://github.com/PAIR-code/saliency/tree/master/saliency/metrics
 # and https://github.com/PAIR-code/saliency/blob/master/pic_metrics.ipynb
-#
+# rewritten from tensorflow
 
 def create_blurred_image(full_img, pixel_mask):
   """ Creates a blurred (interpolated) image.

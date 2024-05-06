@@ -1,3 +1,5 @@
+# https://github.com/chasewalker26/Magnitude-Aligned-Scoring
+
 import torch
 
 # This file implements IG  and LIG
