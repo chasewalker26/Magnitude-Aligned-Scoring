@@ -1,6 +1,18 @@
 # Attribution Quality Metrics with Magnitude Alignment
 The official implementation of "Attribution Quality Metrics with Magnitude Alignment" published in IJCAI 2024
+ * [IJCAI Link]([https://www.ijcai.org/proceedings/2024/59])
 
+**To cite this software please use:**
+```
+    @article{walker2024integrated, 
+        title={Attribution Quality Metrics with Magnitude Alignment}, 
+        volume={33}, url={https://www.ijcai.org/proceedings/2024/59},
+        DOI={https://doi.org/10.24963/ijcai.2024/59},
+        journal={Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence Main Track.}, 
+        author={Walker, Chase and Simon, Dominic and Chen, Kenny and Ewetz, Rickard}, 
+        year={2024}, month={Sep.}, pages={530-538} 
+    }
+```
 ## Datasets
 Place the ImageNet and RESISC45 datasets in the project root folder.
 
