@@ -1,6 +1,6 @@
 # Attribution Quality Metrics with Magnitude Alignment
 The official implementation of "Attribution Quality Metrics with Magnitude Alignment" published in IJCAI 2024
- * [IJCAI Link]([https://www.ijcai.org/proceedings/2024/59])
+ * [IJCAI Link](https://www.ijcai.org/proceedings/2024/59)
 
 **To cite this software please use:**
 ```
