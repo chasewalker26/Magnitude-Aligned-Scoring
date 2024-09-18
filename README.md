@@ -5,13 +5,19 @@ The official implementation of "Attribution Quality Metrics with Magnitude Align
 
 **To cite this software please use:**
 ```
-    @article{walker2024integrated, 
-        title={Attribution Quality Metrics with Magnitude Alignment}, 
-        volume={33}, url={https://www.ijcai.org/proceedings/2024/59},
-        DOI={https://doi.org/10.24963/ijcai.2024/59},
-        journal={Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence Main Track.}, 
-        author={Walker, Chase and Simon, Dominic and Chen, Kenny and Ewetz, Rickard}, 
-        year={2024}, month={Sep.}, pages={530-538} 
+    @inproceedings{walker2024MAS,
+      title     = {Attribution Quality Metrics with Magnitude Alignment},
+      author    = {Walker, Chase and Simon, Dominic and Chen, Kenny and Ewetz, Rickard},
+      booktitle = {Proceedings of the Thirty-Third International Joint Conference on
+                   Artificial Intelligence, {IJCAI-24}},
+      publisher = {International Joint Conferences on Artificial Intelligence Organization},
+      editor    = {Kate Larson},
+      pages     = {530--538},
+      year      = {2024},
+      month     = {8},
+      note      = {Main Track},
+      doi       = {10.24963/ijcai.2024/59},
+      url       = {https://doi.org/10.24963/ijcai.2024/59},
     }
 ```
 ## Datasets
